@@ -1,0 +1,26 @@
+{
+  "name": "thrivesccwebsite",
+  "version": "1.0.0",
+  "description": "JAMstack Thrive Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamlindell/thrivesccwebsite.git"
+  },
+  "keywords": [
+    "SCC",
+    "Thrive"
+  ],
+  "author": "Adam Lindell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamlindell/thrivesccwebsite/issues"
+  },
+  "homepage": "https://github.com/adamlindell/thrivesccwebsite#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
+}
