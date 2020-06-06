@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
     <head>
-        <title>{{title}}</title>
-        <link rel="stylesheet" type="text/css" href="css/reset.css" />
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <title>{{page.data.title}}</title>
+        <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="/css/main.css" />
         <style>
             .calendar {
                 width: 100%;
@@ -13,33 +13,26 @@
     </head>
     <body>
         <header>
-            <img src="img/thriveLogo.jpg" alt="thrive logo" id="thrive-logo"/>
+            <a href="/"><img src="/img/thriveLogo.jpg" alt="thrive logo" id="thrive-logo"/></a>
             <nav>
                 <ol id="main-nav">
-                    <li>Events</li>
-                    <li>Lessons</li>
-                    <li>Events</li>
-                    <li>Lessons</li>
-                    <li>Events</li>
-                    <li>Lessons</li>
-                    <li>Events</li>     
-                    <li>Lessons</li>
-                    <li>Events</li>
-                    <li>Lessons</li>
-                    <li>Events</li>
-                    <li>Lessons</li>
-                    <li>Events</li>
-                    <li>Lessons</li>
+                {%- for navItem in collections.mainNav -%}
+                    {% if page.url == navItem.url %}
+                        <li class="active">{{navItem.data.navTitle}}</li>
+                    {% else %}
+                        <li><a href="{{navItem.url}}">{{navItem.data.navTitle}}</a></li>
+                    {% endif %}
+                {%- endfor -%}
                 </ol>
                 <ol id="nav-icons">
                     <li>
                         <svg id="emailList" class="fa-icon">
-                            <use xlink:href="img/solid.svg#envelope"></use>
+                            <use xlink:href="/img/solid.svg#envelope"></use>
                         </svg>
                     </li>
                     <li>
                         <svg class="fa-icon">
-                            <use xlink:href="img/brands.svg#slack"></use>
+                            <use xlink:href="/img/brands.svg#slack"></use>
                         </svg>
                     </li>
                 </ol>

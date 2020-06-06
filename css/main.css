@@ -9,7 +9,7 @@ header {
     flex-direction: column;
 }
 
-header img {
+header a {
     margin: 0 auto;
     max-width: 100%;
 }
